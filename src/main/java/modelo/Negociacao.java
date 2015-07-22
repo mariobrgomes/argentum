@@ -17,5 +17,4 @@ public final class Negociacao {
     public double getVolume() {
         return preco * quantidade;
     }
-
 }

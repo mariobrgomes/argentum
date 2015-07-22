@@ -2,6 +2,7 @@ package modelo;
 
 import lombok.Data;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
@@ -25,5 +26,22 @@ public final class Candlestick {
 
     public boolean isBaixa() {
         return this.abertura > this.fechamento;
+    }
+
+
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("["  +abertura);
+        stringBuilder.append(", " +fechamento);
+        stringBuilder.append(", " +minimo);
+        stringBuilder.append(", " +maximo);
+        stringBuilder.append(", " +volume);
+        stringBuilder.append(", " +fechamento);
+        stringBuilder.append(", Data:" );
+        stringBuilder.append("]");
+
+
     }
 }
