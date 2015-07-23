@@ -30,18 +30,20 @@ public final class Candlestick {
 
 
 
-    @Override
+   @Override
     public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("["  +abertura);
-        stringBuilder.append(", " +fechamento);
-        stringBuilder.append(", " +minimo);
-        stringBuilder.append(", " +maximo);
-        stringBuilder.append(", " +volume);
-        stringBuilder.append(", " +fechamento);
-        stringBuilder.append(", Data:" );
+        stringBuilder.append("["  + this.getAbertura());
+        stringBuilder.append(", " + this.getFechamento());
+        stringBuilder.append(", " + this.getMinimo());
+        stringBuilder.append(", " + this.getMaximo());
+        stringBuilder.append(", " + this.getVolume());
+        stringBuilder.append(", " + this.getFechamento());
+        stringBuilder.append(", Data: " + sdf.format(this.getData().getTime()));
         stringBuilder.append("]");
 
-
+        return stringBuilder.toString();
     }
 }
